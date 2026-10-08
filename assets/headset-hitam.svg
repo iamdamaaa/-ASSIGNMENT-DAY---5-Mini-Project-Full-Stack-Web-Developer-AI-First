@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <!-- Background gradient: dark studio -->
+    <radialGradient id="bg-h" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </radialGradient>
+    <!-- Ear cup gradient: left -->
+    <radialGradient id="cup-l-h" cx="38%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#3a3a3a"/>
+      <stop offset="50%" stop-color="#1c1c1c"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </radialGradient>
+    <!-- Ear cup gradient: right -->
+    <radialGradient id="cup-r-h" cx="62%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#3a3a3a"/>
+      <stop offset="50%" stop-color="#1c1c1c"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </radialGradient>
+    <!-- Headband gradient -->
+    <linearGradient id="band-h" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#383838"/>
+      <stop offset="40%" stop-color="#222222"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+    <!-- Cushion gradient -->
+    <radialGradient id="cush-l-h" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#2e2e2e"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </radialGradient>
+    <radialGradient id="cush-r-h" cx="60%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#2e2e2e"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </radialGradient>
+    <!-- Subtle ground shadow -->
+    <radialGradient id="shadow-h" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Highlight shine -->
+    <linearGradient id="shine-h" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="blur-shadow">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="url(#bg-h)"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="400" cy="720" rx="200" ry="28" fill="url(#shadow-h)" filter="url(#blur-shadow)"/>
+
+  <!-- === HEADBAND === -->
+  <!-- Outer band arc -->
+  <path d="M 168 440 
+           C 168 210, 230 140, 400 135 
+           C 570 140, 632 210, 632 440"
+        fill="none" stroke="url(#band-h)" stroke-width="36" stroke-linecap="round"/>
+  <!-- Band highlight top -->
+  <path d="M 190 380
+           C 190 220, 240 158, 400 155
+           C 560 158, 610 220, 610 380"
+        fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.08" stroke-linecap="round"/>
+  <!-- Band padding / leather wrap center -->
+  <path d="M 340 137 C 355 130, 445 130, 460 137"
+        fill="none" stroke="#1a1a1a" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 345 135 C 358 128, 442 128, 455 135"
+        fill="none" stroke="#2d2d2d" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- === SLIDER ARMS === -->
+  <!-- Left slider arm -->
+  <rect x="152" y="420" width="28" height="80" rx="6" fill="#1a1a1a"/>
+  <rect x="156" y="424" width="8" height="72" rx="3" fill="#2a2a2a"/>
+  <!-- Right slider arm -->
+  <rect x="620" y="420" width="28" height="80" rx="6" fill="#1a1a1a"/>
+  <rect x="636" y="424" width="8" height="72" rx="3" fill="#2a2a2a"/>
+
+  <!-- === LEFT EAR CUP === -->
+  <!-- Outer shell shadow -->
+  <ellipse cx="187" cy="522" rx="72" ry="86" fill="#050505" opacity="0.7"/>
+  <!-- Outer shell -->
+  <ellipse cx="183" cy="516" rx="72" ry="86" fill="url(#cup-l-h)"/>
+  <!-- Rim ring -->
+  <ellipse cx="183" cy="516" rx="72" ry="86" fill="none" stroke="#333" stroke-width="2"/>
+  <!-- Inner cushion ring -->
+  <ellipse cx="183" cy="516" rx="54" ry="66" fill="url(#cush-l-h)"/>
+  <!-- Cushion texture ring -->
+  <ellipse cx="183" cy="516" rx="54" ry="66" fill="none" stroke="#222" stroke-width="6" stroke-opacity="0.8"/>
+  <!-- Speaker grille -->
+  <ellipse cx="183" cy="516" rx="32" ry="40" fill="#111"/>
+  <!-- Grille dots -->
+  <circle cx="183" cy="499" r="2.5" fill="#1e1e1e"/>
+  <circle cx="175" cy="506" r="2.5" fill="#1e1e1e"/>
+  <circle cx="191" cy="506" r="2.5" fill="#1e1e1e"/>
+  <circle cx="170" cy="516" r="2.5" fill="#1e1e1e"/>
+  <circle cx="183" cy="516" r="2.5" fill="#1e1e1e"/>
+  <circle cx="196" cy="516" r="2.5" fill="#1e1e1e"/>
+  <circle cx="175" cy="526" r="2.5" fill="#1e1e1e"/>
+  <circle cx="191" cy="526" r="2.5" fill="#1e1e1e"/>
+  <circle cx="183" cy="533" r="2.5" fill="#1e1e1e"/>
+  <!-- Cup highlight -->
+  <ellipse cx="165" cy="492" rx="18" ry="22" fill="url(#shine-h)" opacity="0.7"/>
+  <!-- Control button -->
+  <circle cx="225" cy="510" r="8" fill="#1c1c1c" stroke="#333" stroke-width="1.5"/>
+  <circle cx="225" cy="510" r="4" fill="#141414"/>
+
+  <!-- === RIGHT EAR CUP === -->
+  <!-- Outer shell shadow -->
+  <ellipse cx="617" cy="522" rx="72" ry="86" fill="#050505" opacity="0.7"/>
+  <!-- Outer shell -->
+  <ellipse cx="617" cy="516" rx="72" ry="86" fill="url(#cup-r-h)"/>
+  <!-- Rim ring -->
+  <ellipse cx="617" cy="516" rx="72" ry="86" fill="none" stroke="#333" stroke-width="2"/>
+  <!-- Inner cushion ring -->
+  <ellipse cx="617" cy="516" rx="54" ry="66" fill="url(#cush-r-h)"/>
+  <!-- Cushion texture ring -->
+  <ellipse cx="617" cy="516" rx="54" ry="66" fill="none" stroke="#222" stroke-width="6" stroke-opacity="0.8"/>
+  <!-- Speaker grille -->
+  <ellipse cx="617" cy="516" rx="32" ry="40" fill="#111"/>
+  <!-- Grille dots -->
+  <circle cx="617" cy="499" r="2.5" fill="#1e1e1e"/>
+  <circle cx="609" cy="506" r="2.5" fill="#1e1e1e"/>
+  <circle cx="625" cy="506" r="2.5" fill="#1e1e1e"/>
+  <circle cx="604" cy="516" r="2.5" fill="#1e1e1e"/>
+  <circle cx="617" cy="516" r="2.5" fill="#1e1e1e"/>
+  <circle cx="630" cy="516" r="2.5" fill="#1e1e1e"/>
+  <circle cx="609" cy="526" r="2.5" fill="#1e1e1e"/>
+  <circle cx="625" cy="526" r="2.5" fill="#1e1e1e"/>
+  <circle cx="617" cy="533" r="2.5" fill="#1e1e1e"/>
+  <!-- Cup highlight -->
+  <ellipse cx="599" cy="492" rx="18" ry="22" fill="url(#shine-h)" opacity="0.7"/>
+  <!-- USB-C port -->
+  <rect x="567" y="548" width="18" height="6" rx="3" fill="#0d0d0d" stroke="#2a2a2a" stroke-width="1"/>
+
+  <!-- Brand label on right cup -->
+  <text x="617" y="580" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700"
+        fill="#3a3a3a" text-anchor="middle" letter-spacing="2">JOSSGANDOS</text>
+
+  <!-- === CABLE === -->
+  <path d="M 617 602 Q 617 640, 580 660 Q 540 680, 520 720"
+        fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+  <!-- Jack plug -->
+  <rect x="514" y="718" width="12" height="26" rx="6" fill="#222"/>
+  <rect x="517" y="716" width="6" height="8" rx="2" fill="#333"/>
+</svg>

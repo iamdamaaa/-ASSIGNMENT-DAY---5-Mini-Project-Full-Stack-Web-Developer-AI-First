@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda | Jossgandos Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ---- Category chips ---- */
+    .category-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+    .category-chip  {
+      display: inline-block; padding: 0.25rem 0.875rem;
+      background-color: var(--clr-accent-light); color: var(--clr-text-secondary);
+      border: 1px solid var(--clr-border); border-radius: var(--radius-full);
+      font-size: 0.8125rem; font-weight: 600;
+    }
+    /* ---- Services section ---- */
+    .services-section { padding: var(--space-12) 0; background-color: var(--clr-bg-alt); }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: var(--space-6); margin-top: var(--space-6);
+    }
+    .service-card {
+      background: var(--clr-surface); border: 1px solid var(--clr-border);
+      border-radius: var(--radius-lg); padding: var(--space-6);
+      text-align: center;
+    }
+    .service-icon { font-size: 2rem; margin-bottom: var(--space-3); }
+    .service-title { font-weight: 700; margin-bottom: var(--space-2); }
+    .service-desc  { font-size: 0.875rem; color: var(--clr-text-secondary); }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner container">
+      <a href="beranda.html" class="site-logo">
+        <span aria-hidden="true">🎧</span>
+        <span>Jossgandos</span>
+      </a>
+      <nav class="header-nav" aria-label="Navigasi utama">
+        <a href="beranda.html" class="active">Beranda</a>
+        <a href="headset.html">Headset</a>
+        <a href="mouse.html">Mouse</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO — konten statis, hardcode di HTML
+    ============================================================ -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">
+          Selamat datang di <span>Jossgandos Store</span>
+        </h1>
+        <p class="hero-sub">Produk ori, kualitas premium, harga terjangkau.</p>
+        <a href="#produk" class="hero-cta">Lihat Produk</a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         LAYANAN — konten statis, hardcode di HTML
+    ============================================================ -->
+    <section class="services-section">
+      <div class="container">
+        <h2 class="section-title">Kenapa Jossgandos?</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">✅</div>
+            <p class="service-title">Produk Ori</p>
+            <p class="service-desc">Semua produk bergaransi resmi dan 100% original.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🚚</div>
+            <p class="service-title">Pengiriman Cepat</p>
+            <p class="service-desc">Estimasi 2–5 hari kerja ke seluruh Indonesia.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">💬</div>
+            <p class="service-title">Pesan via WhatsApp</p>
+            <p class="service-desc">Mudah dan cepat, langsung terhubung ke tim kami.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">🔒</div>
+            <p class="service-title">Transaksi Aman</p>
+            <p class="service-desc">Pembayaran fleksibel dan terpercaya.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRODUK — data dari API (GET /api/categories + GET /api/products)
+    ============================================================ -->
+    <section class="products-section container" id="produk">
+      <h2 class="section-title">Produk Kami</h2>
+
+      <!-- Kategori (dari API) -->
+      <div id="category-list" class="category-chips"></div>
+
+      <!-- Status API -->
+      <div id="products-status" class="api-status" hidden></div>
+
+      <!-- Loading -->
+      <div id="products-loading" class="loading" aria-live="polite" hidden>
+        <span class="loading-spinner" aria-hidden="true"></span>
+        Memuat produk...
+      </div>
+
+      <!-- Grid produk (diisi JS) -->
+      <div id="product-grid" class="product-grid" hidden></div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <p class="footer-brand"><span aria-hidden="true">🎧</span> Jossgandos Store</p>
+      <p class="footer-copy">© <span id="footer-year"></span> Jossgandos. Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <script src="js/beranda.js"></script>
+</body>
+</html>

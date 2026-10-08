@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </radialGradient>
+    <radialGradient id="body" cx="40%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#3c3c3c"/>
+      <stop offset="50%" stop-color="#1e1e1e"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </radialGradient>
+    <radialGradient id="top" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#383838"/>
+      <stop offset="100%" stop-color="#101010"/>
+    </radialGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="shadow-g" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur-s"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="800" fill="url(#bg)"/>
+
+  <!-- Ground shadow -->
+  <ellipse cx="400" cy="700" rx="160" ry="22" fill="url(#shadow-g)" filter="url(#blur-s)"/>
+
+  <!-- Mouse body -->
+  <path d="M 300 280
+           C 290 240, 310 190, 400 185
+           C 490 190, 510 240, 500 280
+           L 520 520
+           C 522 580, 480 640, 400 645
+           C 320 640, 278 580, 280 520
+           Z"
+        fill="url(#body)"/>
+
+  <!-- Top surface highlight -->
+  <path d="M 320 290
+           C 312 255, 328 210, 400 206
+           C 472 210, 488 255, 480 290
+           L 496 510
+           C 497 563, 462 615, 400 619
+           C 338 615, 303 563, 304 510
+           Z"
+        fill="url(#top)" opacity="0.7"/>
+
+  <!-- Left button split line -->
+  <line x1="400" y1="185" x2="400" y2="360" stroke="#111" stroke-width="2.5"/>
+
+  <!-- Left button highlight -->
+  <path d="M 320 290 C 312 255, 328 210, 400 206 L 400 360 L 304 360 Z"
+        fill="url(#shine)" opacity="0.5"/>
+
+  <!-- Scroll wheel housing -->
+  <rect x="383" y="270" width="34" height="80" rx="17" fill="#141414" stroke="#2a2a2a" stroke-width="1.5"/>
+  <!-- Scroll wheel -->
+  <rect x="388" y="275" width="24" height="70" rx="12" fill="#0a0a0a"/>
+  <!-- Wheel ridges -->
+  <line x1="388" y1="295" x2="412" y2="295" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="388" y1="305" x2="412" y2="305" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="388" y1="315" x2="412" y2="315" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="388" y1="325" x2="412" y2="325" stroke="#2a2a2a" stroke-width="2"/>
+  <line x1="388" y1="335" x2="412" y2="335" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Side left grip texture -->
+  <path d="M 284 380 C 278 380, 272 400, 272 430 C 272 460, 278 480, 284 480"
+        fill="none" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 284 395 C 279 395, 274 410, 274 430 C 274 450, 279 465, 284 465"
+        fill="none" stroke="#252525" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Side right grip texture -->
+  <path d="M 516 380 C 522 380, 528 400, 528 430 C 528 460, 522 480, 516 480"
+        fill="none" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 516 395 C 521 395, 526 410, 526 430 C 526 450, 521 465, 516 465"
+        fill="none" stroke="#252525" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- DPI button -->
+  <ellipse cx="400" cy="375" rx="14" ry="7" fill="#181818" stroke="#2a2a2a" stroke-width="1.2"/>
+
+  <!-- Brand label -->
+  <text x="400" y="570" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700"
+        fill="#3a3a3a" text-anchor="middle" letter-spacing="2">JOSSGANDOS</text>
+
+  <!-- LED accent strip (subtle glow) -->
+  <path d="M 360 625 Q 400 632 440 625" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Cable -->
+  <path d="M 390 185 Q 388 140, 385 100 Q 382 60, 390 40"
+        fill="none" stroke="#1e1e1e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 410 185 Q 412 140, 415 100 Q 418 60, 410 40"
+        fill="none" stroke="#1e1e1e" stroke-width="5" stroke-linecap="round"/>
+</svg>

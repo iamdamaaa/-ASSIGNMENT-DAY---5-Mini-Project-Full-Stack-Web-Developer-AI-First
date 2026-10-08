@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mouse Jossgandos | Jossgandos Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner container">
+      <a href="beranda.html" class="site-logo">
+        <span aria-hidden="true">🎧</span><span>Jossgandos</span>
+      </a>
+      <nav class="header-nav" aria-label="Navigasi utama">
+        <a href="beranda.html">Beranda</a>
+        <a href="headset.html">Headset</a>
+        <a href="mouse.html" class="active">Mouse</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <nav class="breadcrumb container" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="beranda.html">Beranda</a></li>
+        <li aria-hidden="true" class="breadcrumb-sep">›</li>
+        <li aria-current="page">Mouse Jossgandos</li>
+      </ol>
+    </nav>
+
+    <section class="product-section container">
+      <div class="product-layout">
+
+        <!-- Gallery -->
+        <div class="product-gallery">
+          <figure class="product-main-image">
+            <img id="product-image" src="../assets/mouse-hitam.svg" alt="Mouse Jossgandos warna Hitam" width="600" height="600" />
+          </figure>
+          <div class="product-thumbnails" role="list">
+            <button class="thumb-btn" type="button" data-color="hitam" aria-pressed="false" aria-label="Tampilkan Hitam">
+              <img src="../assets/mouse-hitam.svg" alt="Hitam" />
+            </button>
+            <button class="thumb-btn" type="button" data-color="putih" aria-pressed="false" aria-label="Tampilkan Putih">
+              <img src="../assets/mouse-putih.svg" alt="Putih" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="product-info">
+          <div class="product-identity">
+            <p class="product-category">Mouse Gaming Ori</p>
+            <h1 class="product-name">Mouse Jossgandos</h1>
+            <p class="product-price">Rp199.000<span class="price-per-item"> / item</span></p>
+            <p class="product-description">Mouse ori cap Jossgandos presisi tinggi, nyaman digenggam seharian. Sensor optik akurat, klik responsif, cocok buat kerja maupun gaming.</p>
+          </div>
+          <hr class="divider" />
+
+          <!-- Warna -->
+          <div class="selector-group">
+            <p class="selector-label" id="color-label">
+              Warna: <span class="selector-value" id="color-selected-label">Belum dipilih</span>
+            </p>
+            <div class="color-options" role="group" aria-labelledby="color-label">
+              <button class="color-btn" type="button" data-color="hitam" aria-pressed="false" aria-label="Warna Hitam">
+                <span class="color-swatch hitam" aria-hidden="true"></span>
+                <span class="color-name">Hitam</span>
+              </button>
+              <button class="color-btn" type="button" data-color="putih" aria-pressed="false" aria-label="Warna Putih">
+                <span class="color-swatch putih" aria-hidden="true"></span>
+                <span class="color-name">Putih</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Jumlah -->
+          <div class="selector-group">
+            <p class="selector-label" id="qty-label">Jumlah:</p>
+            <div class="quantity-control" role="group" aria-labelledby="qty-label">
+              <button class="qty-btn" id="qty-decrease" type="button" aria-label="Kurangi" disabled>−</button>
+              <output class="qty-value" id="qty-value" aria-live="polite">1</output>
+              <button class="qty-btn" id="qty-increase" type="button" aria-label="Tambah">+</button>
+            </div>
+            <p class="stock-info">Stok tersedia: <strong>15 item</strong></p>
+          </div>
+
+          <hr class="divider" />
+
+          <!-- Ringkasan -->
+          <div class="order-summary" aria-live="polite">
+            <h2 class="summary-title">Ringkasan Pilihan</h2>
+            <dl class="summary-list">
+              <div class="summary-row"><dt>Warna</dt><dd id="summary-color">—</dd></div>
+              <div class="summary-row"><dt>Jumlah</dt><dd id="summary-qty">1</dd></div>
+              <div class="summary-row summary-total"><dt>Total</dt><dd id="summary-total">Rp199.000</dd></div>
+            </dl>
+          </div>
+
+          <button class="btn-confirm" id="btn-confirm" type="button" disabled aria-disabled="true" aria-describedby="confirm-hint">
+            🛒 Pesan via WhatsApp
+          </button>
+          <p class="confirm-hint" id="confirm-hint">Pilih warna terlebih dahulu.</p>
+
+          <div class="confirmation-message" id="confirmation-message" role="status" aria-live="assertive" hidden>
+            <span class="confirm-icon" aria-hidden="true">✓</span>
+            <p id="confirmation-text"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs -->
+    <section class="product-details container">
+      <div class="detail-tabs" role="tablist">
+        <button class="tab-btn active" role="tab" aria-selected="true"  aria-controls="tab-spek"    id="tab-btn-spek">Spesifikasi</button>
+        <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="tab-garansi"  id="tab-btn-garansi" tabindex="-1">Garansi</button>
+        <button class="tab-btn"        role="tab" aria-selected="false" aria-controls="tab-kirim"    id="tab-btn-kirim"   tabindex="-1">Pengiriman</button>
+      </div>
+      <div id="tab-spek" role="tabpanel" aria-labelledby="tab-btn-spek" class="tab-panel active">
+        <ul class="spec-list">
+          <li><strong>Sensor:</strong> Optik 3200 DPI</li>
+          <li><strong>DPI:</strong> 400 / 800 / 1600 / 3200</li>
+          <li><strong>Tombol:</strong> 6 tombol programmable</li>
+          <li><strong>Polling Rate:</strong> 125Hz</li>
+          <li><strong>Kabel:</strong> 1.5m USB-A braided</li>
+          <li><strong>Bobot:</strong> 95g</li>
+        </ul>
+      </div>
+      <div id="tab-garansi" role="tabpanel" aria-labelledby="tab-btn-garansi" class="tab-panel" hidden>
+        <p>Garansi resmi <strong>1 tahun</strong> dari Jossgandos.</p>
+      </div>
+      <div id="tab-kirim" role="tabpanel" aria-labelledby="tab-btn-kirim" class="tab-panel" hidden>
+        <p>Pengiriman ke seluruh Indonesia. Estimasi <strong>2–5 hari kerja</strong>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <p class="footer-brand"><span aria-hidden="true">🎧</span> Jossgandos Store</p>
+      <p class="footer-copy">© <span id="footer-year"></span> Jossgandos. Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <script src="js/mouse.js"></script>
+</body>
+</html>
